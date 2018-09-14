@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
 </head>
+
 <body>
     <h1>hello world</h1>
+    <div>
+        <span>from</span>
+    </div>
+    <div>
+        <input type="text" id="fromInput">
+    </div>
+    <div>
+        <span>message</span>
+    </div>
+    <div>
+        <textarea name="textInput" id="textInput" cols="30" rows="10"></textarea>
+    </div>
+    <div>
+        <button onclick="send()">send message</button>
+    </div>
+    <div><span>all messages</span></div>
+    <div>
+        <textarea name="messages" id="messages" cols="30" rows="10" readonly></textarea>
+    </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/index.js"></script>
 </body>
+
 </html>
