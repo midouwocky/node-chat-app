@@ -5,31 +5,32 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
-    <h1>hello world</h1>
-    <div>
-        <span>from</span>
+<body class="chat">
+
+    <div class="chat__sidebar">
+        <h3>People</h3>
+        <div id="users"></div>
     </div>
-    <div>
-        <input type="text" id="fromInput">
-    </div>
-    <div>
-        <span>message</span>
-    </div>
-    <div>
-        <textarea name="textInput" id="textInput" cols="30" rows="10"></textarea>
-    </div>
-    <div>
-        <button onclick="send()">send message</button>
-    </div>
-    <div><span>all messages</span></div>
-    <div>
-        <textarea name="messages" id="messages" cols="30" rows="10" readonly></textarea>
+    <div class="chat__main">
+        <ol id="messages" class="chat__messages"></ol>
+        <div class="chat__footer">
+
+            <form id="message-from" action="">
+                <input name="textInput" id="textInput" placeholder="message..." autofocus autocomplete="off"/>
+                <button>send message</button>
+            </form>
+            <button id="locationButton">send location</button>
+        </div>
     </div>
 
 
+
+
+    <script src="js/lib/jquery-3.3.1.min.js"></script>
+    <script src="js/lib/moment.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/index.js"></script>
 </body>
